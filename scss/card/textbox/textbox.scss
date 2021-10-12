@@ -1,0 +1,15 @@
+@use "../../color-var" as color;
+
+input {
+    width: 100%;
+    border: 1px solid color.$textbox;
+    border-radius: 0.2rem;
+    padding: 0 0.5rem;
+    margin-right: 0.5rem;
+    font-size: 1rem;
+
+    &:focus {
+        border: 2px solid color.$textbox-onfocus;
+        outline: none;   
+    }
+}

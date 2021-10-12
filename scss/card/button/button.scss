@@ -1,0 +1,36 @@
+@use "../../color-var" as color;
+
+@mixin btn-model ($font-size, $bg-color, $bd-radius) {
+    color: #fff;
+    background: $bg-color;  
+    font-size: $font-size;
+    border: none;
+    border-radius: $bd-radius;
+    cursor: pointer;
+
+    &:hover {
+        opacity: 0.8;
+    }
+}
+
+.add-btn {
+    @include btn-model(1rem, color.$add-btn-color, 0.2rem);
+    padding: 0rem 1rem;
+}
+
+.check-btn {
+    @include btn-model(1rem, color.$check-btn-color, 0);
+    padding: 0 0.8rem;
+    display: none;
+}
+
+.remove-btn {
+    @include btn-model(1rem, color.$remove-btn-color, 0);
+    padding: 0 0.8rem;
+    display: none;
+}
+
+.clear-all-btn {
+    @include btn-model(1rem, color.$clear-btn-color, 0.2rem);
+    padding: 0.5rem 1rem;
+}
